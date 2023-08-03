@@ -10,7 +10,9 @@ jobs:
     runs-on: ubuntu-latest
     steps: 
     - name: PWD
-      run: echo "PWD="$pwd
+      run: |
+        cd ${{ github.workspace }}
+        echo "PWD="$pwd
     - name: Envsubst test
       run: |
         $pwd
