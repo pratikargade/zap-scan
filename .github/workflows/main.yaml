@@ -10,5 +10,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:     
     - name: Envsubst test
-      run: chmod +x ${{ github.workspace }}/script/envsub.sh      
+      run: |
+        echo "Before"
+        cat ../manifiest/deployment.yaml
+
+        export tag="latest2"
+
+        envsubst < ../manifiest/deployment.yaml.tmpl > ../manifiest/deployment.yaml
+
+        echo "After"
+
+        cat ../manifiest/deployment.yaml
 
