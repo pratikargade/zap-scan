@@ -8,7 +8,9 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    steps:     
+    steps: 
+    - name: PWD
+      run: echo "PWD="$pwd
     - name: Envsubst test
       run: |
         $pwd
