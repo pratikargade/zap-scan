@@ -1,0 +1,14 @@
+name: site-security-scan
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ mail ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:     
+    - name: Envsubst test
+      run: chmod +x ${{ github.workspace }}/script/envsub.sh      
+
