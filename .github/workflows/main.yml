@@ -12,4 +12,4 @@ jobs:
     - name: OWASP ZAP Baseline Scan
       uses: zaproxy/action-baseline@v0.3.0
       with:
-        target: "http://phoeonix.ravindra.tech/"
+        target: "https://random-data-api.com/api/v2/"
