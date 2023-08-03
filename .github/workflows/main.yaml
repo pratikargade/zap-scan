@@ -12,13 +12,13 @@ jobs:
     - name: Envsubst test
       run: |
         echo "Before"
-        cat ../manifiest/deployment.yaml
+        cat ${{ github.workspace }}/manifiest/deployment.yaml
 
         export tag="latest2"
 
-        envsubst < ../manifiest/deployment.yaml.tmpl > ../manifiest/deployment.yaml
+        envsubst < ${{ github.workspace }}/manifiest/deployment.yaml.tmpl > ${{ github.workspace }}/manifiest/deployment.yaml
 
         echo "After"
 
-        cat ../manifiest/deployment.yaml
+        cat ${{ github.workspace }}/manifiest/deployment.yaml
 
