@@ -11,6 +11,7 @@ jobs:
     steps:     
     - name: Envsubst test
       run: |
+        pwd
         echo "Before"
         cat manifiest/deployment.yaml
 
